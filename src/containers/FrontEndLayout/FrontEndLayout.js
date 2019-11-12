@@ -1,13 +1,12 @@
 import React, { Component, Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import * as router from 'react-router-dom';
-import { Container } from 'reactstrap';
+
 
 // routes config
 import frontendRoutes from '../../frontendRoutes.js';
 
-const FrontEndHeader = React.lazy(() => import('./FrontEndHeader'));
-const FrontEndFooter = React.lazy(() => import('./FrontEndFooter'));
+import FrontEndHeader from './FrontEndHeader';
+import FrontEndFooter from './FrontEndFooter';
 
 class FrontEndLayout extends Component {
 

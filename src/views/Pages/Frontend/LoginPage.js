@@ -16,10 +16,8 @@ import {
   MDBBtn,
   MDBMask,
   MDBCard,
-  MDBModal,
-  MDBModalHeader,
-  MDBModalBody,
-  MDBModalFooter,
+  MDBModal,  
+  MDBModalBody,  
   MDBIcon
 } from "mdbreact";
 import "./LoginPage.css";
@@ -48,8 +46,7 @@ class LoginPage extends React.Component {
     const loginData = {
       email: this.state.email,
       password: this.state.password
-    };
-    this.setState( { loading: true }, () => {
+    };    this.setState( { loading: true }, () => {
       commenService.postAPI( `auth/sign-in`, loginData )
         .then( res => {
          

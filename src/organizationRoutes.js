@@ -1,7 +1,6 @@
-import React from 'react';
-const Dashboard = React.lazy(() => import('./views/OrganizationDashboard/Dashboard'));
-const Profile = React.lazy(() => import('./views/OrganizationDashboard/Profile/Profile'));
-const ChangePassword = React.lazy(() => import('./views/OrganizationDashboard/ChangePassword/ChangePassword'));
+import Dashboard from './views/OrganizationDashboard/Dashboard/Dashboard';
+import Profile from './views/OrganizationDashboard/Profile/Profile';
+import ChangePassword from './views/OrganizationDashboard/ChangePassword/ChangePassword';
 
 const adminRoutes = [
   { path: '/organization/', exact: true, name: 'Home' },

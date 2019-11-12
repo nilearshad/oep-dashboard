@@ -154,7 +154,7 @@ class Profile extends Component {
 
   render() {
 
-    const { loading, formField, formValid } = this.state;
+    const { loading } = this.state;
     let loaderElement = '';
     if(loading)
       loaderElement = <Loader />

@@ -33,7 +33,7 @@ class DefaultHeader extends Component {
             <NavLink to="/admin/dashboard" className="nav-link" >Dashboard</NavLink>
           </NavItem>
           <NavItem className="px-3">
-            <Link to="/admin/users" className="nav-link">Users</Link>
+            <Link to="/admin/organization" className="nav-link">Organization</Link>
           </NavItem>          
         </Nav>
         <Nav className="ml-auto" navbar>

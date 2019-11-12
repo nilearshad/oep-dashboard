@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 // import { renderRoutes } from 'react-router-config';
+
+
+// Containers
+import  AdminLayout from './containers/AdminLayout/AdminLayout';
+import  OrganizationLayout from './containers/OrganizationLayout/OrganizationLayout';
+import  FrontEndLayout from './containers/FrontEndLayout/FrontEndLayout';
 import './App.scss';
 /*Common Service*/
 import commonService from './core/services/commonService';
 const loading = () => <div className="animated fadeIn pt-3 text-center">Loading...</div>;
-
-// Containers
-const AdminLayout = React.lazy(() => import('./containers/AdminLayout'));
-const OrganizationLayout = React.lazy(() => import('./containers/OrganizationLayout'));
-const FrontEndLayout = React.lazy(() => import('./containers/FrontEndLayout/FrontEndLayout'));
-
 
 class App extends Component {
 
@@ -33,7 +33,7 @@ class App extends Component {
 const PrivateRoute = ({ component, ...rest }) => {
   return (
     <Route {...rest} render={routeProps => {
-      return commonService.getAuth() && localStorage.getItem("role") == "admin" ? (
+      return commonService.getAuth() && localStorage.getItem("role") === "admin" ? (
         renderMergedProps(component, routeProps, rest)
       ) : (
         <Redirect to={{
@@ -47,7 +47,7 @@ const PrivateRoute = ({ component, ...rest }) => {
 const OrganizationRoute = ({ component, ...rest }) => {
   return (
     <Route {...rest} render={routeProps => {
-      return commonService.getAuth() && localStorage.getItem("role") == "organization" ? (
+      return commonService.getAuth() && localStorage.getItem("role") === "organization" ? (
         renderMergedProps(component, routeProps, rest)
       ) : (
         <Redirect to={{

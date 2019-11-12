@@ -1,10 +1,8 @@
-import React from 'react';
-
-const AboutPage = React.lazy(() => import('./views/Pages/Frontend/AboutPage'));
-const LoginPage = React.lazy(() => import('./views/Pages/Frontend/LoginPage'));
-const ResetPassword = React.lazy(() => import('./views/Pages/Frontend/ResetPassword'));
-const RegisterPage = React.lazy(() => import('./views/Pages/Frontend/RegisterPage'));
-const HomePage = React.lazy(() => import('./views/Pages/Frontend/HomePage'));
+import HomePage from './views/Pages/Frontend/HomePage';
+import AboutPage from './views/Pages/Frontend/AboutPage';
+import LoginPage from './views/Pages/Frontend/LoginPage';
+import ResetPassword from './views/Pages/Frontend/ResetPassword';
+import RegisterPage from './views/Pages/Frontend/RegisterPage';
 
 const frontendRoutes = [
   { path: '/', exact: true, name: 'Home', component: HomePage },

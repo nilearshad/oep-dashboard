@@ -20,9 +20,9 @@ import navigation from '../../_nav_org';
 // routes config
 import organizationRoutes from '../../organizationRoutes';
 import './OrganizationLayout.css';
-const DefaultAside = React.lazy(() => import('./DefaultAside'));
-const DefaultFooter = React.lazy(() => import('./DefaultFooter'));
-const DefaultHeader = React.lazy(() => import('./DefaultHeader'));
+import DefaultAside from './DefaultAside';
+import DefaultFooter from './DefaultFooter';
+import DefaultHeader from './DefaultHeader';
 
 class OrganizationLayout extends Component {
 
